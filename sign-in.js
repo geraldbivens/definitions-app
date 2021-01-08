@@ -13,12 +13,12 @@ createUser.addEventListener('submit', (event) => {
     const last_name = formData.get('last_name')
     const email = formData.get('email')
     const password = formData.get('password')
-    const newUser = {
+    const newUser = { user: {
         first_name: first_name,
         last_name: last_name,
         email: email,
         password: password
-    }
+    }}
 
     fetch('http://localhost:3000/users', {
         method: "POST",
